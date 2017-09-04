@@ -23,3 +23,15 @@ deploy:
   on:
     repo: LeonardoGastonRossi/IonicTest
     tags: true
+language: objective-c
+os: osx
+osx_image: xcode7
+before_install:  
+- export LANG=en_US.UTF-8
+- brew update
+- npm install -g npm@2.14.5
+- npm install -g grunt-cli cordova ionic
+install:
+- npm install
+script:
+- ionic cordova build ios
