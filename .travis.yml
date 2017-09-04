@@ -1,18 +1,25 @@
 language: android
 before_install:
-- nvm install stable
+- nvm install 6
 - node --version
 - npm install -g ionic cordova
 install:
 - npm install
+android:
+  components:
+  - build-tools-23.0.1
+  - android-23
+  - extra-android-m2repository
+  - extra-google-google_play_services
+  - extra-google-m2repository
 script:
-- ionic cordova build android --release
+- ionic cordova build android
 deploy:
   skip_cleanup: true
   provider: releases
   api_key:
     secure: e4QiX0fFrunl6OGf5uf4/4T4Qfrb+DjjDP8Wf0yrB2XRn7nxSFZpSiDT+2k7246zV8nl3M9urBV6A3ifjKMWIPNOKLz7ylMWXUJpOaOcllTNujF3uULfruS5PK7d4XvXpYwYbVt+gzFuHE0Fm9MLcngICm/UtjlMW/JaAequhKOe+T1HdXAlygTNi1Kvxm5lJTkJb7HKIUWwhpenh/sR/BI/3jGxt1ySqS+4XbczxdeMOVJblA3XXaaA/KtYfNwhx6DDh08gcjA3zvlXP6BnPkFcnERm8sbiRSZfxeywF1D54t6je7zGvW5O+/umI1vH1LL5/Evz2vQaHFjMYtarvU7H1uwA6EcIQxU7E9wT7qW/gjI7JfEhqvwDhJSSLaJUCeNKOXINyp64PAuQqCng/YA4TsEwtXwn3LjtWcV12qXg7o1XuVUI67xsIllQyV07KyOzfhye9EvtuIfX6llFZVx3ETaKd+kNpGggpehPhXKiMyzfJbcY1qXgHWGj+Os47yqlqF+CrfofwT+P5LrPkRuPJRfuaPeMZlaMWU9x464T0DPs0uAi5JGEW5PNKkNrxtr09ekK8gS2suLxj5V6HjVP/ymGfaW2kC08jBnHlik3IaxvAtKMEdfrumAQ5uksfFSFUXix3Fp88o5QXo7Vw4evmrA9Njb5o5lZURTiBAY=
-  file: $TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk/android-release-unsigned.apk
+  file: $TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk/android-debug.apk
   on:
     repo: LeonardoGastonRossi/IonicTest
     tags: true
