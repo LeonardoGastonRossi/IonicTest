@@ -17,6 +17,8 @@ script:
 deploy:
   skip_cleanup: true
   provider: releases
+  api_key:
+    secure: IO81R4p3mCQ3TLDWKV75GXiRJmlwo9R7zbakoFGyfpKSVrYHWmL7zFR3I7+Bxl597f2nAnOTzHy3SBiIEyGSZCOV+94YFmoUQbQPxkg5jMdAS2XlVEEgadUhLHGzFQfXxLpPpGSZLp9gwiy8FHSK/cQdjTvvL+eq48lUqd8otNYkp44QMYUAsU+U040fMYAqKeqwSo5EjEgftoxahK+mPafdfcgvQwHihELp+yUjGwwyxjgmo+KRd5FLB6D7FkbKu//RYA2aTFs0fiuoa3guAOmKOsF68f6dTLIQ4KCEYW/eH06St+b7m4r9i0mltO66mtM1mGuWmIoRxTSmmRSnWrUgl56mVLra62ISEfNnkMriECZYK1XgwpfxtryIKX7gsnqqTGFu7KNh74Ckqv0kclSMPYJs9ub63usc8N482sj+KEpxJhu+0o8hFD+xv1keYRKFCelxC4/e5AZTj0rqiOJleAeCJ+gV1jhhoSxteTWG5zdNT5o4N6++BcCx6MUPEQjMvmJBzplc/FTgzPgVx26+/C3OjNBwet6D4oLIHe/FgbJm+GoGj6h7sUKbkdFl6rlENgUPZuokVZCMvmCdJnK9//vVHLRVfUBP40kNBWtOq4H58L7H+pbNvXh1XBrIexVun47SiFSTN23wd/xCpuSs4AemnnxPJlggFXk+1t4=
   file: $TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk/android-release-unsigned.apk
   on:
     repo: LeonardoGastonRossi/IonicTest
