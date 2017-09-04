@@ -4,7 +4,7 @@ before_install:
 - node --version
 install:
 - npm install
-- sudo npm install ionic cordova 
+- npm install ionic cordova 
 android:
   components:
   - build-tools-23.0.1
@@ -13,7 +13,7 @@ android:
   - extra-google-google_play_services
   - extra-google-m2repository
 script:
-- ionoc cordova build android 
+- ionic cordova build android
 deploy:
   skip_cleanup: true
   provider: releases
