@@ -2,9 +2,9 @@ language: android
 before_install:
 - nvm install 6
 - node --version
+- npm install -g ionic cordova
 install:
 - npm install
-- npm install -g ionic cordova 
 android:
   components:
   - build-tools-23.0.1
@@ -18,7 +18,7 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: IO81R4p3mCQ3TLDWKV75GXiRJmlwo9R7zbakoFGyfpKSVrYHWmL7zFR3I7+Bxl597f2nAnOTzHy3SBiIEyGSZCOV+94YFmoUQbQPxkg5jMdAS2XlVEEgadUhLHGzFQfXxLpPpGSZLp9gwiy8FHSK/cQdjTvvL+eq48lUqd8otNYkp44QMYUAsU+U040fMYAqKeqwSo5EjEgftoxahK+mPafdfcgvQwHihELp+yUjGwwyxjgmo+KRd5FLB6D7FkbKu//RYA2aTFs0fiuoa3guAOmKOsF68f6dTLIQ4KCEYW/eH06St+b7m4r9i0mltO66mtM1mGuWmIoRxTSmmRSnWrUgl56mVLra62ISEfNnkMriECZYK1XgwpfxtryIKX7gsnqqTGFu7KNh74Ckqv0kclSMPYJs9ub63usc8N482sj+KEpxJhu+0o8hFD+xv1keYRKFCelxC4/e5AZTj0rqiOJleAeCJ+gV1jhhoSxteTWG5zdNT5o4N6++BcCx6MUPEQjMvmJBzplc/FTgzPgVx26+/C3OjNBwet6D4oLIHe/FgbJm+GoGj6h7sUKbkdFl6rlENgUPZuokVZCMvmCdJnK9//vVHLRVfUBP40kNBWtOq4H58L7H+pbNvXh1XBrIexVun47SiFSTN23wd/xCpuSs4AemnnxPJlggFXk+1t4=
+    secure: e4QiX0fFrunl6OGf5uf4/4T4Qfrb+DjjDP8Wf0yrB2XRn7nxSFZpSiDT+2k7246zV8nl3M9urBV6A3ifjKMWIPNOKLz7ylMWXUJpOaOcllTNujF3uULfruS5PK7d4XvXpYwYbVt+gzFuHE0Fm9MLcngICm/UtjlMW/JaAequhKOe+T1HdXAlygTNi1Kvxm5lJTkJb7HKIUWwhpenh/sR/BI/3jGxt1ySqS+4XbczxdeMOVJblA3XXaaA/KtYfNwhx6DDh08gcjA3zvlXP6BnPkFcnERm8sbiRSZfxeywF1D54t6je7zGvW5O+/umI1vH1LL5/Evz2vQaHFjMYtarvU7H1uwA6EcIQxU7E9wT7qW/gjI7JfEhqvwDhJSSLaJUCeNKOXINyp64PAuQqCng/YA4TsEwtXwn3LjtWcV12qXg7o1XuVUI67xsIllQyV07KyOzfhye9EvtuIfX6llFZVx3ETaKd+kNpGggpehPhXKiMyzfJbcY1qXgHWGj+Os47yqlqF+CrfofwT+P5LrPkRuPJRfuaPeMZlaMWU9x464T0DPs0uAi5JGEW5PNKkNrxtr09ekK8gS2suLxj5V6HjVP/ymGfaW2kC08jBnHlik3IaxvAtKMEdfrumAQ5uksfFSFUXix3Fp88o5QXo7Vw4evmrA9Njb5o5lZURTiBAY=
   file: $TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk/android-release-unsigned.apk
   on:
     repo: LeonardoGastonRossi/IonicTest
