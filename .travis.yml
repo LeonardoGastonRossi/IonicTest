@@ -19,5 +19,5 @@ deploy:
   provider: releases
   file: $TRAVIS_BUILD_DIR/platforms/android/build/outputs/apk/android-release-unsigned.apk
   on:
-    repo: SolsticeConsulting/ba-react-lyon
+    repo: LeonardoGastonRossi/IonicTest
     tags: true
